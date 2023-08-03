@@ -58,7 +58,7 @@ zip -r fasttext-language-model.zip pretrained
 ```
 
 ## Create a lambda function in Python
-Configure for `Python 3.10` runtime and using `arm64` architecture (if you are using layer provided in this repostirory).
+Configure for `Python 3.10` runtime and using `arm64` architecture (if you are using layer provided in this repostirory).  
 Copy contents from `handler.py` file to your function and make sure your 2 layers are attached to new function.
 
 ### Test Deployment
