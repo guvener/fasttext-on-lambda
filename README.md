@@ -8,8 +8,8 @@ First prepare fastText library and trained language models as layers to reduce t
 We install fastText library using fasttext-wheel python library.
 
 #### Information
-`aws-fasttext-layer-python3.10-arm64.zip` file provided in layer directory is prepared for `Python 3.10` runtime and using `arm64` architecture.
-You can create a layer uploading zip file with this configuration or build your own using instructions below.
+`aws-fasttext-layer-python3.10-arm64.zip` layer provided in layer directory is prepared for `Python 3.10` runtime and uses `arm64` architecture.  
+You can create a layer by uploading the zip file with the given configuration or build your own using the instructions below.
 
 # FastText Predict Dominant Language
 https://github.com/facebookresearch/fastText
