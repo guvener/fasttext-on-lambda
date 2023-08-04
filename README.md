@@ -43,10 +43,8 @@ docker cp 79e3e2cdc863:/layer/mypackage.zip /Users/guvenergokce
 
 ### Layer 2 - Language identification model
 
-There are two trained models, lid.176.bin is more accurate though due to large file size, needs to be uploaded from s3 bucket.
-
-#### Information
-`fasttext-language-model.zip` file provided in layer directory uses light pretrained model `lid.176.ftz`, replace lid.176.ftz with lid.176.bin in case you build large model as below.
+There are two trained models: lid.176.bin is more accurate, but it requires uploading to an S3 bucket due to its large file size.
+`fasttext-language-model.zip` file provided in GitHub repository uses light pre trained model `lid.176.ftz`, replace lid.176.ftz with lid.176.bin in case you build large model as below.
 
 ```bash
 # create a pretrained folder, download model from fbai's public files and zip folder.
