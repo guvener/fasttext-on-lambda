@@ -58,8 +58,8 @@ zip -r fasttext-language-model.zip pretrained
 ```
 
 ## Create a lambda function in Python
-Configure for `Python 3.10` runtime and using `arm64` architecture (if you are using layer provided in this repostirory).  
-Copy contents from `handler.py` file to your function and make sure your 2 layers are attached to new function.
+Configure for `Python 3.10` runtime and use `arm64` architecture (if using provided layer in this repository).  
+Copy `handler.py` contents to your function and make sure you have added both layers to your function.
 
 ### Test Deployment
 A test event JSON object is provided in test directory to mock the structure of request and response.
