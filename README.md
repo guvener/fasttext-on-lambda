@@ -1,18 +1,16 @@
 # Dominant language detection with fastText Layer on AWS Lambda
 Facebook research team's fastText library provides useful methods for text classification.
+In this repository, We use [facebookresearch/fastText](https://github.com/facebookresearch/fastText) and [trained model](https://fasttext.cc/docs/en/language-identification.html) for language identification.
 
 ## AWS Layers
-First prepare fastText library and trained language models as layers to reduce the size of deployment packages.
+First, prepare fastText library and trained language models as layers to reduce the size of deployment packages.
 
 ### Layer 1 - fastText using fasttext-wheel
-We install fastText library using fasttext-wheel python library.
+We install the fastText library using the fasttext-wheel python package.
 
 #### Information
 `aws-fasttext-layer-python3.10-arm64.zip` layer provided in layer directory is prepared for `Python 3.10` runtime and uses `arm64` architecture.  
 You can create a layer by uploading the zip file with the given configuration or build your own using the instructions below.
-
-# FastText Predict Dominant Language
-https://github.com/facebookresearch/fastText
 
 ### fastText using fasttext-wheel
 We install fastText library using fasttext-wheel python library.
@@ -61,3 +59,11 @@ Copy `handler.py` contents to your function and make sure you have added both la
 
 ### Test Deployment
 A test event JSON object is provided in test directory to mock the structure of request and response.
+
+```json
+{
+  "text": "Perché i semiconduttori sono il pezzo di tecnologia più prezioso e conteso oggi?"
+}
+```
+## Conclusion
+fastText proves to be a cost-effective and efficient alternative to other managed dominant language detection services. Our tests have consistently shown that for texts over 100 characters, the detected languages are often the same as those produced by managed services such as AWS Comprehend and Google Language API.
